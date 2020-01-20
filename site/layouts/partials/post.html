@@ -2,17 +2,16 @@
 {{ $st := .page }}
 {{ $display := .display  }}
 
-
 <div class="contentContainer">
     <!-- display a summary -->
     {{ if eq $display "summary" }}
         {{ with $st.Title }}
-            <h2><a href="{{ $st.RelPermalink }}">{{ $st.Title }}</a></h2>
+            <h2><a href="{{ $st.RelPermalink }}">{{ $st.Title }} {{ if $st.Draft }}[DRAFT]{{ end }}</a></h2>
         {{ end }}
     <!-- display the whole post -->
     {{ else if eq $display "post" }}
         {{ with $st.Title }}
-            <h1>{{ $st.Title }}</h1>
+            <h1>{{ $st.Title }} {{ if $st.Draft }}[DRAFT]{{ end }}</h1>
         {{ end }}
     {{ end }}
     <!-- meta info about the post -->
