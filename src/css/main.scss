@@ -133,6 +133,16 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
   > * + * {
     margin-top: 1.5rem;
   }
+
+  blockquote > * + * {
+    margin-top: 1.5rem;
+  }
+
+  blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 1px solid $accent_color;
+  }
 }
 
 section {
