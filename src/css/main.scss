@@ -126,7 +126,8 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
   flex-direction: column;
 
   * hr {
-    border-bottom: 1px solid $accent_color;
+    border: none;
+    border-top: 1px solid $accent_color;
     width: 30ch;
   }
 
