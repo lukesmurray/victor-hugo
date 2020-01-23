@@ -1,3 +1,12 @@
 <footer class="footer">
-    <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }} <p>
+    <p class="dummy"></p>
+    <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }}</p>
+    <a class="rss-link" rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink | relURL }}" title="Luke Murray" target="_blank">
+        <p>RSS Feed
+            <img class="rss-icon"
+            src="/rssIcon.svg"
+            alt="rss subscribe icon"
+            />
+        </p>
+    </a>
 </footer>

@@ -27,6 +27,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- alternative output formats -->
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
     <!-- facebook open graph -->
     <meta property="fb:app_id" content="509136019700811">
     <meta property="og:url" content="{{ $.Site.Params.hostName }}{{ .Permalink }}">
